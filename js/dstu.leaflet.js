@@ -43,3 +43,5 @@ L.marker([47.23883,39.71148], {icon: volleyballIcon}).bindPopup("<b>Волейб
 
 //Leaflet.MeasureControl - расчет расстояния 
 L.Control.measureControl().addTo(mymap);
+//L.Control.MousePosition - отображение координат
+L.control.mousePosition().addTo(mymap);
