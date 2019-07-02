@@ -1,3 +1,48 @@
+/* css для index.html*/
+html, body{
+	font-family: 'Arial', sans-serif;
+	font-size: 100%;
+	background: #FFf;
+}
+h3.tittle {
+    font-size: 2.5em;
+   font-weight: 600;
+   color: #34353a;
+   font-family: Helvetica, sans-serif;text-align:center;
+   margin-bottom:1em;
+ }
+ #ab {
+    background: #F4F4F4;
+    padding: 3em 0;
+  }
+.img-fluid
+{
+    width: 50%;
+    padding: 1em; 
+}
+
+  .text {
+    min-height: 530px;
+      padding: 1em;  
+  }
+  .ab-grid.text h4 {
+    font-size: 1.3em;
+      line-height: 1.6em;
+      white-space: pre-line; 
+    color: #03162d;
+    width: 100%;
+  }
+  .ab-grid.text p{
+      text-align:justify;
+    font-size:1em;
+    line-height: 1.8em;
+    color: #03162d;
+    width: 100%;
+      margin: 0;
+      text-indent: 40px;
+  }
+
+/* css для map.html*/
 #mapid 
 { 
     position: fixed;

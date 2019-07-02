@@ -107,7 +107,7 @@
   L.Control.MeasureControl = L.Control.extend({
 
     statics: {
-      TITLE: 'Measure distances'
+      TITLE: 'Измерьте расстояния'
     },
     options: {
       position: 'topleft',
