@@ -15,11 +15,18 @@ h3.tittle {
     background: #F4F4F4;
     padding: 3em 0;
   }
+  #logo
+{
+    width: 10%;
+    margin: 0 auto;
+   
+}
 .img-fluid
 {
     width: 50%;
     padding: 1em; 
 }
+
 
   .text {
     min-height: 530px;
@@ -54,13 +61,32 @@ h3.tittle {
 
 .popup-list{
     width: 200px;
-    margin-top: 5px;
-    min-height: 100px;
     position: absolute;
-    top: 100px;
-    right: 130px;
+    top: 60px;
+    right: 80px;
     background: transparent;
-    z-index: 1000;
+    
+}
+.card-header
+{
+  font-weight: 600
+}
+
+span.menu {
+  width: 35px;
+  height: 35px;
+  background: url(img/nav_3.png)no-repeat 0px 0px;
+  display: inline-block;
+  margin: 0px 0px;
+}
+
+span.menu:hover{
+  
+  width: 35px;
+  height: 35px;
+  background: url(img/nav_1.png)no-repeat 0px 0px;
+  display: inline-block;
+  margin: 0px 0px;
 }
 
 .leaflet-control-draw-measure
