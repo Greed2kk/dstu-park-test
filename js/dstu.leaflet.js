@@ -103,7 +103,7 @@ let markers_info = [{
 // создание группы маркеров
 let group = L.layerGroup(),
     list = document.getElementById('list')
-// проход по массиву маркеров
+    // проход по массиву маркеров
 markers_info.forEach(markers => {
     let marker = L.marker(markers.latLng, {
         title: markers.name,
@@ -124,21 +124,20 @@ function onClick(data) {
     mymap.panTo(marker.getLatLng(), marker.openPopup());
 }
 // гиперссылки списком
-/*
-markers_info.forEach(marker => {
-    let item = document.createElement('li');
-    item.innerHTML = `<a href="#">${marker.popup}</a>`;
-    item.addEventListener('click', onClick.bind(null, marker));
-    list.appendChild(item);
-});
-  */
+
+// markers_info.forEach(marker => {
+//     let item = document.createElement('li');
+//     item.innerHTML = `<a href="#">${marker.popup}</a>`;
+//     item.addEventListener('click', onClick.bind(null, marker));
+//     list.appendChild(item);
+// });
+
 //удаление маркеров при отдалении
- mymap.on('zoomend' , function (e) {
-    if (mymap.getZoom()>14)
-    {
-        
+mymap.on('zoomend', function(e) {
+    if (mymap.getZoom() > 14) {
+
         group.addTo(mymap);
-    }else {
+    } else {
         group.remove();
     }
 });
@@ -149,18 +148,20 @@ L.control.mousePosition().addTo(mymap);
 //backbone списки
 var MyView = Backbone.View.extend({
     marker: {},
-    initialize: function (data) {
+    initialize: function(data) {
         this.marker = data;
     },
-    render: function () {
+    render: function() {
+
         var html = ' <div class="list-group-item list-group-item-action active" id="header"></div>' +
             '<ul class="list-group"><li class="list-group-item list-group-item-action p-2" id="inf"></li></ul><br>';
         this.$el.html(html);
         this.$el.find('#header').text(this.marker.name).bind('click', onClick.bind(null, this.marker));
         this.$el.find('#inf').text(this.marker.inf).bind('click', onClick.bind(null, this.marker));
         $('#list').append(this.$el);
+
     }
 });
-markers_info.forEach(function (marker) {
+markers_info.forEach(function(marker) {
     (new MyView(marker)).render()
 });
